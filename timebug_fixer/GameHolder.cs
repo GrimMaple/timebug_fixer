@@ -11,7 +11,8 @@ namespace timebug_fixer
 
         enum ProcessSizes
         {
-            MW13 = 0x00678e4e
+            MW13 = 0x00678e4e,
+            MW12 = 0x0067F000
         }
 
         public void Refresh()
@@ -37,6 +38,11 @@ namespace timebug_fixer
                 {
                     case ProcessSizes.MW13:
                         game = new MW.MW13(process);
+                        Console.WriteLine("Guessing Most Wanted v1.3");
+                        break;
+                    case ProcessSizes.MW12:
+                        game = new MW.MW12(process);
+                        Console.WriteLine("Guessing Most Wanted v1.2");
                         break;
                     default:
                         Console.WriteLine("Unknown game type");

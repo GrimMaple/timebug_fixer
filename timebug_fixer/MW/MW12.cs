@@ -10,7 +10,8 @@ namespace timebug_fixer.MW
     {
         public MW12(GameProcess proc) : base(proc)
         {
-            throw new NotImplementedException();
+            globalIgtAddress = 0x00987598;
+            raceIgtAddress = 0x0091329C;
         }
     }
 }
